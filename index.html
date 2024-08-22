@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CDn link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- fontawsone cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tailwind Demo</title>
+</head>
+<body>
+    <div class="overflow-x-hidden">
+        <!-- header -->
+        <header class="bg-white p-4">
+            <!-- Links -->
+            <div class="flex justify-between items-center mb-2">
+                <div class="flex space-x-4 font-medium">
+                    <a href="#" class="text-gray-700 hover:underline text-sm pl-40">Account</a>
+                    <a href="#" class="text-gray-700 hover:underline text-sm">Track Order</a>
+                    <a href="#" class="text-gray-700 hover:underline text-sm">Support</a>
+                </div>
+                <div class="flex space-x-4 font-medium">
+                    <a href="#" class="text-gray-700 hover:underline text-sm">United states <i
+                            class="fa-solid fa-chevron-down fa-sm pl-2"></i></a>
+                    <a href="#" class="text-gray-700 hover:underline text-sm">USD <i
+                            class="fa-solid fa-chevron-down fa-sm pl-2"></i></a>
+                    <a href="#" class="text-gray-700 hover:underline text-sm pr-40">Bangla <i
+                            class="fa-solid fa-chevron-down fa-sm pl-2"></i></a>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <nav class="flex justify-between items-center pt-5">
+                <div class="flex items-center space-x-4 pl-40">
+                    <img src="https://shopo-next.vercel.app/assets/images/logo.svg" alt="Logo" class="h-12 w-40">
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <!-- Dropdown and Search Input -->
+                    <div class="flex border border-gray-300 overflow-hidden">
+                        <input type="text" placeholder="Search product..."
+                            class="px-4 py-2 focus:outline-none text-gray-600 text-sm">
+                        <div class="w-px bg-gray-300 h-8 self-center"></div>
+                        <select
+                            class="bg-white text-gray-700 px-3 py-2 pr-20 border-r border-gray-300 focus:outline-none text-sm">
+                            <option>More Items</option>
+                            <option>Category 1</option>
+                            <option>Category 2</option>
+                            <option>Category 3</option>
+                        </select>
+                        <button class="px-4 py-2 bg-amber-400 text-white">Search</button>
+                    </div>
+                </div>
+            </nav>
+            <!-- Second navbar -->
+            <nav class=" bg-amber-400 mt-5">
+                <div>
+                    <select
+                        class="bg-white text-black font-medium px-3 py-2 pr-20 border-r border-gray-300 focus:outline-none text-sm rounded-t-lg mt-2 mb-1 pt-2 ml-40">
+                        <option>All Categories</option>
+                        <option>Category 1</option>
+                        <option>Category 2</option>
+                        <option>Category 3</option>
+                    </select>
+                    <a href="#"
+                        class="rounded-md px-3 py-2 text-sm font-medium text-black font-medium hover:bg-gray-700 hover:text-white ml-40">Homepage</a>
+                    <a href="#"
+                        class="rounded-md px-3 py-2 text-sm font-medium text-black font-medium hover:bg-gray-700 hover:text-white">Shop</a>
+                    <a href="#"
+                        class="rounded-md px-3 py-2 text-sm font-medium text-black font-medium hover:bg-gray-700 hover:text-white">Pages</a>
+                    <a href="#"
+                        class="rounded-md px-3 py-2 text-sm font-medium text-black font-medium hover:bg-gray-700 hover:text-white">About</a>
+                    <a href="#"
+                        class="rounded-md px-3 py-2 text-sm font-medium text-black font-medium hover:bg-gray-700 hover:text-white">Blog</a>
+                    <a href="#"
+                        class="rounded-md px-3 py-2 text-sm font-medium text-black font-medium hover:bg-gray-700 hover:text-white mr-56">Contact</a>
+                    <a href="#" class="bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Become
+                        A
+                        Seller<i class="fa-solid fa-chevron-right pl-2 fa-sm"></i></a>
+                </div>
+            </nav>
+        </header>
+        <!-- body -->
+        <section id="body" class="">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Image 1 -->
+                <img src="https://shopo-next.vercel.app/assets/images/banner-1.png" alt="" class="w-screen ml-40 mt-10">
+                <!-- Image 2 -->
+                <div class="pt-10 pl-40">
+                    <img src="https://shopo-next.vercel.app/assets/images/banner-2.png" alt="Placeholder Image"
+                        class="mb-8">
+                    <img src="https://shopo-next.vercel.app/assets/images/banner-3.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- About -->
+        <section class="py-8 ml-40 mr-40 mt-10 shadow-2xl">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Icon 1 -->
+                    <div class="flex items-start space-x-4 ml-4">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-dolly fa-xl text-amber-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Free Shipping</h3>
+                            <p class="text-gray-600">When order over $100</p>
+                        </div>
+                    </div>
+                    <!-- Icon 2 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-arrow-rotate-left fa-xl text-amber-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Free Return</h3>
+                            <p class="text-gray-600">Get Return within 30 days</p>
+                        </div>
+                    </div>
+                    <!-- Icon 3 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-user-lock fa-xl text-amber-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Secure Payment</h3>
+                            <p class="text-gray-600">100% Secure Online Payment</p>
+                        </div>
+                    </div>
+                    <!-- Icon 4 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-trophy fa-xl text-amber-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Best Qulity</h3>
+                            <p class="text-gray-600">Original Product Guarenteed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- shop -->
+        <section id="shop">
+            <div class="mt-16 font-semibold pl-40">
+                <!-- heading -->
+                <div class="flex justify-between">
+                    <div class="mb-5 text-3xl ">
+                        <h1>Gamer World</h1>
+                    </div>
+                    <div class="text-lg">
+                        <a href="">
+                            <h1>View more<i class="fa-solid fa-arrow-right ml-1 mr-40 fa-sm"></i></h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-between gap-12">
+                    <!-- first card -->
+                    <div
+                        class="w-2/6 max-w-sm bg-white shadow dark:bg-white dark:border-gray-700 transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://lyneoriginals.com/cdn/shop/files/HYDRO104.jpg?v=1697693647"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-black">Lyne
+                                    Series 7 Headset with Mic for Xbox One, Nintendo Switch, Mobile Phone, iPad, PC...
+                                </h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse text-amber-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">4.8</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-blue-700 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-amber-400 dark:hover:bg-amber-700 dark:focus:ring-amber-400">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second card -->
+                    <div
+                        class="w-2/6 max-w-sm bg-white shadow dark:bg-white dark:border-gray-700 transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg "
+                                src="https://5.imimg.com/data5/SELLER/Default/2024/1/377428564/XX/TD/QB/42697090/rs1752-2-4g-wireless-game-controller-gamepad-500x500.png"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-black">Tech Aura
+                                    V8
+                                    Wireless BT4.0 Bluetooth Wireless Gaming Controller, Joystick Gamepad </h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse text-amber-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">3.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-amber-400 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-amber-400 dark:hover:bg-amber-700 dark:focus:ring-amber-400">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- third card -->
+                    <div
+                        class="w-2/6 max-w-sm bg-white shadow dark:bg-white dark:border-gray-700 transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://m.media-amazon.com/images/I/61Mk3YqYHpL._AC_UF1000,1000_QL80_.jpg"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-black"> Buy
+                                    Wireless
+                                    Gaming Mouse Bluetooth Mouse RGB Rechargeable 2.4G USB Cordless...</h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse text-amber-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">3.5</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-amber-400 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-amber-400 dark:hover:bg-amber-700 dark:focus:ring-amber-400">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fourth card -->
+                    <div
+                        class="w-2/6 max-w-sm bg-white shadow dark:bg-white dark:border-gray-700 mr-40 transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://images-na.ssl-images-amazon.com/images/I/91kXZN089WL.jpg"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-black">
+                                    Thermaltake
+                                    LCGS View 380 AIO Liquid Cooled CPU Gaming PC AMD RYZEN 9 3900X 12-core</h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse text-amber-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">3.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-amber-400 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-amber-400 dark:hover:bg-amber-700 dark:focus:ring-amber-400">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Company Names -->
+        <section id="c-names">
+            <div class="mt-16 font-semibold ml-40 mr-40">
+                <!-- heading -->
+                <div class="mb-5 text-3xl ">
+                    <h1>Shop by Brand</h1>
+                </div>
+                <div class="gap-4 shadow">
+                    <div class="grid grid-cols-6 divide-x divide-gray-300">
+                        <div class="p-10 border-r-indigo-500">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-1.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-2.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-3.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-4.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-5.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-6.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                    </div>
+                    <hr class="bg-gray-300">
+                    <div class="grid grid-cols-6 divide-x divide-gray-300">
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-12.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-7.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-8.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-9.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-10.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                        <div class="p-10">
+                            <img src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbrand-11.png&w=1920&q=75"
+                                alt="No Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ads -->
+        <section id="ads">
+            <div class="grid grid-cols-2 gap-4 ml-40 mr-40">
+                <div class="p-20">
+                    <a href=""><img
+                            src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fads-1.png&w=1920&q=75"
+                            alt=""></a>
+                </div>
+                <div class="p-20">
+                    <a href=""><img
+                            src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fads-2.png&w=1920&q=75"
+                            alt=""></a>
+                </div>
+            </div>
+        </section>
+        <!-- shop2 -->
+        <section id="shop">
+            <div class="mt-16 font-semibold pl-40">
+                <!-- heading -->
+                <div class="flex justify-between">
+                    <div class="mb-5 text-3xl ">
+                        <h1>Popular Sales</h1>
+                    </div>
+                    <div class="text-lg">
+                        <a href="">
+                            <h1>View more<i class="fa-solid fa-arrow-right ml-1 mr-40 fa-sm"></i></h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-between gap-12">
+                    <!-- first card -->
+                    <div
+                        class="w-2/6 max-w-sm bg-white shadow dark:bg-white dark:border-gray-700 transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://m.economictimes.com/thumb/msid-98897778,width-1200,height-1200,resizemode-4,imgsize-35708/6-latest-mobile-phones-with-12gb-ram-in-india.jpg"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-black">Mobile
+                                    Phones
+                                    with 12GB RAM: 6 Latest Mobile Phones with 12GB RAM in India in 2024 Starting....
+                                </h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse text-amber-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">4.8</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-blue-700 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-amber-400 dark:hover:bg-amber-700 dark:focus:ring-amber-400">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second card -->
+                    <div
+                        class="w-2/6 max-w-sm bg-white shadow dark:bg-white dark:border-gray-700 transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg " src="https://cdn.moglix.com/p/lIv2DXpZjvUtX-xxlarge.jpg"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-black">Longway
+                                    Speedy 50W 3 Blade Black Ultra High Speed Anti-Dust Table Fan, Sweep: 300 mm </h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse text-amber-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">3.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-amber-400 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-amber-400 dark:hover:bg-amber-700 dark:focus:ring-amber-400">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- third card -->
+                    <div
+                        class="w-2/6 max-w-sm bg-white shadow dark:bg-white dark:border-gray-700 transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://cobbitaly.com/cdn/shop/products/SHJNG05BLUE_2.jpg?v=1710482511&width=2048"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-black"> The
+                                    Balenciaga Platform Sneaker Is the Chonkiest Shoe Ever Made | British GQ...</h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse text-amber-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">3.5</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-amber-400 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-amber-400 dark:hover:bg-amber-700 dark:focus:ring-amber-400">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fourth card -->
+                    <div
+                        class="w-2/6 max-w-sm bg-white shadow dark:bg-white dark:border-gray-700 mr-40 transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                        <a href="#">
+                            <img class="p-8 rounded-t-lg"
+                                src="https://media.casioindiashop.com/assets/products-images/enlarge-image/D011.webp"
+                                alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-black">Casio
+                                    Vintage
+                                    Collection A-158WA-1Q Unisex Watch Online at Best Price</h5>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <div class="flex items-center space-x-1 rtl:space-x-reverse text-amber-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">3.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <a href="#"
+                                    class="text-white bg-amber-400 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-amber-400 dark:hover:bg-amber-700 dark:focus:ring-amber-400">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ads2 -->
+        <section id="ads-2">
+            <div class="ml-40 p-28 mr-40">
+                <a href=""><img
+                        src="https://shopo-next.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fads-3.png&w=1920&q=75"
+                        alt=""></a>
+            </div>
+        </section>
+        <!-- horizontal cards -->
+        <section id="h-cards">
+            <div class="ml-40 mr-40">
+                <div class="flex justify-between">
+                    <div class="mb-5 text-3xl font-semibold">
+                        <h1>New Arrivals</h1>
+                    </div>
+                    <div class="text-lg">
+                        <a href="">
+                            <h1>View more<i class="fa-solid fa-arrow-right ml-1 fa-sm"></i></h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="container mx-auto grid grid-cols-3 gap-8">
+                    <!-- Column 1 -->
+                    <div class="space-y-4">
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://lyneoriginals.com/cdn/shop/files/HYDRO104.jpg?v=1697693647" alt="Image 1"
+                                class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">Lyne Series 7 Headset</h2>
+                                <p class="text-gray-600 font-bold">$27.27</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/1/377428564/XX/TD/QB/42697090/rs1752-2-4g-wireless-game-controller-gamepad-500x500.png"
+                                alt="Image 2" class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">Tech Aura V8</h2>
+                                <p class="text-gray-600 font-bold">$19.24</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://m.media-amazon.com/images/I/61Mk3YqYHpL._AC_UF1000,1000_QL80_.jpg"
+                                alt="Image 3" class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">Wireless Gaming Mouse</h2>
+                                <p class="text-gray-600 font-bold">$10.24</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/91kXZN089WL.jpg" alt="Image 4"
+                                class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">Thermaltake LCGS View 380</h2>
+                                <p class="text-gray-600 font-bold">$30.24</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="space-y-4">
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://m.economictimes.com/thumb/msid-98897778,width-1200,height-1200,resizemode-4,imgsize-35708/6-latest-mobile-phones-with-12gb-ram-in-india.jpg"
+                                alt="Image 5" class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">Mobile Phones with 12GB RAM</h2>
+                                <p class="text-gray-600 font-bold">$40.24</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://cobbitaly.com/cdn/shop/products/SHJNG05BLUE_2.jpg?v=1710482511&width=2048"
+                                alt="Image 6" class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">The Balenciaga Sneaker</h2>
+                                <p class="text-gray-600 font-bold">$9.4</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://cdn.moglix.com/p/lIv2DXpZjvUtX-xxlarge.jpg" alt="Image 6"
+                                class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">Longway Speedy 50W 3</h2>
+                                <p class="text-gray-600 font-bold">$15.34</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://media.casioindiashop.com/assets/products-images/enlarge-image/D011.webp"
+                                alt="Image 6" class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">Casio Vintage Collection</h2>
+                                <p class="text-gray-600 font-bold">$30.2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column 3 -->
+                    <div class="space-y-4">
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://www.jiomart.com/images/product/original/493911453/boat-airdopes-125-with-total-playtime-50-hours-quad-mics-with-enx-technology-beast-mode-mystic-black-digital-o493911453-p602988810-1-202307062343.jpeg?im=Resize=(420,420)"
+                                alt="Image 6" class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">BoAt Airdopes 125</h2>
+                                <p class="text-gray-600 font-bold">$20.2</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://images-cdn.ubuy.co.in/654771d6e1d77539523263ff-ringheart-couple-rings-yellow-gold.jpg"
+                                alt="Image 6" class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">Yellow Gold Filled Couple Rings </h2>
+                                <p class="text-gray-600 font-bold">$2.2</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://salty.co.in/cdn/shop/files/CollierBlackChain.jpg?v=1691520006&width=1080"
+                                alt="Image 6" class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold">Stylish Chain For Men</h2>
+                                <p class="text-gray-600 font-bold">$10.2</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-4 shadow-md rounded transform transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNXk_JDCB-aek8EEJR1c7C0t-kdoL8mbTPQg&s"
+                                alt="Image 6" class="w-16 h-16 object-cover">
+                            <div>
+                                <h2 class="text-lg font-bold"> Euro Games Gaming Keyboard</h2>
+                                <p class="text-gray-600 font-bold">$65.45</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- search -->
+        <section id="search">
+            <div class="mt-20">
+                <div class="relative bg-cover bg-center h-80"
+                    style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYlhrT2mYXwMYfLMCobjrzjF7GSd21AfY3Fg&s');">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4">
+                        <h1 class="text-4xl font-bold">Get <span class="text-amber-400">20%</span> off Discount Coupon
+                        </h1>
+                        <h1 class="text-xl mb-6">By Subscribe our Newsletter</h1>
+                        <div class="flex w-full max-w-md">
+                            <i class="fa-regular fa-envelope text-black bg-white pt-4 pl-3 hover:text-amber-400"></i>
+                            <input type="text" class="w-full text-sm p-3 focus:outline-white focus:white"
+                                placeholder="EMAIL ADDRESS">
+                            <button
+                                class="bg-amber-400 text-white px-6 hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Search</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- footer -->
+        <section id="footer">
+            <div class="flex justify-center p-16">
+                <img class="h-12 w-40" src="https://shopo-next.vercel.app/assets/images/logo.svg" alt="">
+            </div>
+            <hr class="ml-40 mr-40">
+            <footer class="bg-white text-black py-8 ">
+                <div class="container mx-auto px-4 ml-40">
+                    <div class="flex flex-wrap">
+                        <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                            <h5 class="text-lg font-bold mb-4">About Us</h5>
+                            <p class="text-sm">
+                                We are a company dedicated
+                            </p>
+                            <p class="text-sm">
+                                to providing the best
+                            </p>
+                            <p class="text-sm">
+                                service possible.
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                            <h5 class="text-lg font-bold mb-4">Features</h5>
+                            <ul>
+                                <li class="mb-2"><a href="#" class="hover:underline">Home</a></li>
+                                <li class="mb-2"><a href="#" class="hover:underline">About</a></li>
+                                <li class="mb-2"><a href="#" class="hover:underline">Services</a></li>
+                                <li class="mb-2"><a href="#" class="hover:underline">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                            <h5 class="text-lg font-bold mb-4">Contact Us</h5>
+                            <p class="text-sm">
+                                123 Street Name, City, State, 12345
+                            </p>
+                            <p class="text-sm">
+                                Email: info@example.com
+                            </p>
+                            <p class="text-sm">
+                                Phone: (123) 456-7890
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/4">
+                            <h5 class="text-lg font-bold mb-4 pl-3">Follow Us</h5>
+                            <ul class="flex space-x-4">
+                                <li><a href="#" class="hover:text-gray-400"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#" class="hover:text-gray-400"><i class="fab fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="mt-10 ml-40 mr-40">
+                <div class="mt-8 text-center">
+                    <p class="text-sm justify-center font-bold">&copy; 2024 Your Company. All rights reserved.</p>
+                </div>
+            </footer>
+        </section>
+    </div>
+</body>
+</html>
